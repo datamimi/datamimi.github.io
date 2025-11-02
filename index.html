@@ -1,250 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Maryam Ahmed</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=https://fonts.googleapis.com/css?family=Inconsolata:400,500,600,700|Raleway:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: MyPortfolio
-  * Updated: Jan 09 2024 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minimal Résumé</title>
+  <meta name="description" content="A super simple, minimal one-page résumé website.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111111;
+      --muted: #555555;
+      --accent: #0a7ea4;
+      --maxw: 760px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1216;
+        --fg: #e9eef2;
+        --muted: #a8b3bd;
+        --accent: #6ec8e0;
+      }
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap {
+      max-width: var(--maxw);
+      margin: 4rem auto;
+      padding: 0 1.25rem;
+    }
+    header {
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: clamp(2rem, 4vw + 1rem, 3rem);
+      line-height: 1.2;
+      margin: 0 0 .5rem 0;
+      letter-spacing: -0.01em;
+    }
+    p.lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+    h2 {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin: 2rem 0 .5rem;
+      border-top: 1px solid color-mix(in oklab, var(--fg) 20%, transparent);
+      padding-top: .9rem;
+    }
+    ul {
+      margin: .5rem 0 0 1.25rem;
+      padding: 0;
+    }
+    li + li { margin-top: .35rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover, a:focus { text-decoration: underline; }
+    footer {
+      margin-top: 2.5rem;
+      font-size: .9rem;
+      color: var(--muted);
+    }
+    @media print {
+      .wrap { margin: 0; }
+      a { color: inherit; text-decoration: none; }
+      footer { display: none; }
+    }
+  </style>
 </head>
-
 <body>
+  <main class="wrap" aria-label="Résumé">
+    <header>
+      <h1><!-- Replace with your name -->Dr Maryam Ahmed</h1>
+      <p class="lead">
+        <!-- Replace with your short summary (2–3 sentences) -->
+        I'm an award winning Senior Data Scientist and Journalist at BBC News. 
+        
+        I use data science and machine learning to conduct investigations, and I build tools to make journalists' lives easier.
+        
+        I hold a PhD in Engineering from Oxford.
+      </p>
+    </header>
 
-  <main id="main">
+    <section aria-labelledby="awards">
+      <h2 id="awards">Awards and Fellowships</h2>
+      <ul>
+        <li><strong>Google News Initiative AI Fellowship (2023)</strong> - I used LLMs to <a href="https://blogs.lse.ac.uk/polis/2023/06/01/meet-the-2023-journalismai-fellowship-cohort/">parse the Register of MPs' Financial Interests</a></li>
+        <li><strong>George Weidenfeld Fellowship (2022)</strong> - I worked with the Süddeutsche Zeitung to <a href="https://www.sueddeutsche.de/projekte/artikel/muenchen/muenchen-wohnen-mieten-anzeigen-immoscout-e794230/?reduced=true">investigate Munich's rental market</a></li>
+        <li><strong>Royal Statistical Society Award for Investigative Journalism (2021)</strong> - I uncovered <a href="https://rss.org.uk/news-publication/news-publications/2021/general-news/statistical-excellence-in-journalism-awards-2021-w/">algorithmic bias at the Passport Office</a></li>
+      </ul>
+    </section>
 
-    <!-- ======= Works Section ======= -->
-    <section class="section site-portfolio">
-      <div class="container">
-        <div class="row mb-5 align-items-center">
-          <div class="col-md-12 col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
-            <h2>Maryam Ahmed</h2>
-            <p class="mb-0">Award-winning Senior Data Scientist &amp; Journalist, BBC News</p>
-          </div>
-        </div>
-        <div id="portfolio-grid" class="row no-gutter" data-aos="fade-up" data-aos-delay="200">
+    <section aria-labelledby="projects">
+      <h2 id="projects">Selected Projects</h2>
+      <ul>
+        <li><a href="https://www.bbc.co.uk/news/uk-68505321">Egg freezing patients 'misled' by clinics</a></li>
+        <li><a href="https://www.bbc.co.uk/news/world-middle-east-68969239">Half of Gaza water sites damaged or destroyed, BBC satellite data reveals</a></li>
+        <li><a href="https://www.bbc.co.uk/news/uk-66205669">'I feel manipulated’: The 'debt help' ads targeting struggling mums​​</a></li>
+        <li><a href="https://www.bbc.co.uk/news/uk-65889217">Driving test fraudsters advertising services online</a></li>
+        <li><a href="https://www.bbc.co.uk/news/health-56072684">Covid: How will we know if the vaccine is working?</a></li>
+        <li><a href="https://www.bbc.co.uk/news/world-52103747">Coronavirus: The world in lockdown in maps and charts</a></li>
+        <li><a href="https://www.bbc.co.uk/news/uk-55331081">Property site listings exclude renters on benefits</a></li>
+        <li><a href="https://www.bbc.co.uk/news/technology-54349538">UK passport photo checker shows bias against dark-skinned women</a></li>
+      </ul>
+    </section>
 
-        <!-- ==================== ITEM ===================== -->
-          <div class="item web col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="https://www.sueddeutsche.de/projekte/artikel/muenchen/muenchen-wohnen-mieten-anzeigen-immoscout-e794230/" class="item-wrap fancybox">
-              <div class="work-info">
-                <h3>Who can afford to live in Munich?</h3>
-                <span>Süddeutsche Zeitung</span>
-              </div>
-              <img class="img-fluid" src="assets/img/who_can_afford_munich.png">
-            </a>
-          </div>
-        <!-- ==================== ITEM ===================== -->
-        <div class="item web col-sm-6 col-md-4 col-lg-4 mb-4">
-        <a href="https://www.bbc.co.uk/programmes/m001qsx2" class="item-wrap fancybox">
-            <div class="work-info">
-            <h3>New York vs the Lanternfly</h3>
-            <span>BBC Radio 4</span>
-            </div>
-            <img class="img-fluid" src="assets/img/fooc_aug_2023.png">
-        </a>
-        </div>
-        <!-- ==================== ITEM ===================== -->
-        <div class="item web col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="https://rss.org.uk/news-publication/news-publications/2021/general-news/statistical-excellence-in-journalism-awards-2021-w/" class="item-wrap fancybox">
-                <div class="work-info">
-                <h3>Investigative Journalism Award</h3>
-                <span>Royal Statistical Society</span>
-                </div>
-                <img class="img-fluid" src="assets/img/rss.png">
-            </a>
-            </div>
-        <!-- ==================== ITEM ===================== -->
-        <div class="item web col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="https://www.bbc.co.uk/sounds/play/w3ct4tq8" class="item-wrap fancybox">
-                <div class="work-info">
-                <h3>Why do smart speakers get facts wrong?</h3>
-                <span>BBC World Service</span>
-                </div>
-                <img class="img-fluid" src="assets/img/smart_speakers.png">
-            </a>
-            </div>
-          <!-- ==================== ITEM ===================== -->
-          <div class="item photography col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="https://www.bbc.com/news/uk-66205669" class="item-wrap fancybox">
-              <div class="work-info">
-                <h3>The debt help ads targeting struggling mums</h3>
-                <span>BBC News</span>
-              </div>
-              <img class="img-fluid" src="assets/img/debt_ads.png">
-            </a>
-          </div>
-          <!-- ==================== ITEM ===================== -->
-          <div class="item branding col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="https://www.bbc.co.uk/news/resources/idt-74697280-e684-43c5-a782-29e9d11fecf3" class="item-wrap fancybox">
-              <div class="work-info">
-                <h3>A simple guide to help you understand AI</h3>
-                <span>BBC News</span>
-              </div>
-              <img class="img-fluid" src="assets/img/ai_explainer.png">
-            </a>
-          </div>
-          <!-- ==================== ITEM ===================== -->
-          <div class="item design col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="https://www.bbc.co.uk/news/technology-66023797" class="item-wrap fancybox">
-              <div class="work-info">
-                <h3>The climate change denying TikTok post that won't go away</h3>
-                <span>BBC News</span>
-              </div>
-              <img class="img-fluid" src="assets/img/tiktok_climate_change.png">
-            </a>
-          </div>
-          <!-- ==================== ITEM ===================== -->
-          <div class="item photography col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="https://www.bbc.co.uk/news/uk-65889217" class="item-wrap fancybox">
-              <div class="work-info">
-                <h3>Driving test fraudsters advertise services online</h3>
-                <span>BBC News</span>
-              </div>
-              <img class="img-fluid" src="assets/img/fake_driving_licenses.png">
-            </a>
-          </div>
-        <!-- ==================== ITEM ===================== -->
-        <div class="item photography col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="https://blogs.lse.ac.uk/polis/2023/06/01/meet-the-2023-journalismai-fellowship-cohort/" class="item-wrap fancybox">
-                <div class="work-info">
-                <h3>JournalismAI Fellowship</h3>
-                <span>Google News Initiative and LSE</span>
-                </div>
-                <img class="img-fluid" src="assets/img/journalism_ai.png">
-            </a>
-        </div>
-          <!-- ==================== ITEM ===================== -->
-          <div class="item branding col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="https://www.bbc.co.uk/news/health-59495405" class="item-wrap fancybox">
-              <div class="work-info">
-                <h3>Beauticians breaking the law on underage lip fillers</h3>
-                <span>BBC News</span>
-              </div>
-              <img class="img-fluid" src="assets/img/lip_fillers.png">
-            </a>
-          </div>
-          <!-- ==================== ITEM ===================== -->
-          <div class="item branding col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="https://www.bbc.co.uk/news/health-56072684" class="item-wrap fancybox">
-              <div class="work-info">
-                <h3>How will we know the vaccine is working?</h3>
-                <span>BBC News</span>
-              </div>
-              <img class="img-fluid" src="assets/img/vaccine.png">
-            </a>
-          </div>
-          <!-- ==================== ITEM ===================== -->
-          <div class="item branding col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="https://www.bbc.co.uk/programmes/m000qhhb" class="item-wrap fancybox">
-              <div class="work-info">
-                <h3>Moneybox</h3>
-                <span>BBC Radio 4</span>
-              </div>
-              <img class="img-fluid" src="assets/img/moneybox_dss.png">
-            </a>
-          </div>
-        <!-- ==================== ITEM ===================== -->
-        <div class="item branding col-sm-6 col-md-4 col-lg-4 mb-4">
-        <a href="https://www.bbc.co.uk/news/uk-55331081" class="item-wrap fancybox">
-            <div class="work-info">
-            <h3>Property site listings exclude renters on benefits</h3>
-            <span>BBC News</span>
-            </div>
-            <img class="img-fluid" src="assets/img/no_dss.png">
-        </a>
-        </div>
-        <!-- ==================== ITEM ===================== -->
-        <div class="item branding col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="https://www.bbc.co.uk/news/technology-54349538" class="item-wrap fancybox">
-                <div class="work-info">
-                <h3>UK passport photo checker shows bias against dark skinned women</h3>
-                <span>BBC News</span>
-                </div>
-                <img class="img-fluid" src="assets/img/passports.png">
-            </a>
-        </div>
-        <!-- ==================== ITEM ===================== -->
-        <div class="item branding col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="https://www.bbc.co.uk/news/world-52103747" class="item-wrap fancybox">
-                <div class="work-info">
-                <h3>A visual guide to the world in lockdown</h3>
-                <span>BBC News</span>
-                </div>
-                <img class="img-fluid" src="assets/img/lockdown.png">
-            </a>
-        </div>
-        <!-- ==================== ITEM ===================== -->
-        <div class="item branding col-sm-6 col-md-4 col-lg-4 mb-4">
-            <a href="https://www.bbc.co.uk/news/uk-43808007" class="item-wrap fancybox">
-                <div class="work-info">
-                <h3>Windrush: Who exactly was on board?</h3>
-                <span>BBC News</span>
-                </div>
-                <img class="img-fluid" src="assets/img/windrush.png">
-            </a>
-        </div>
-
-
-        </div>
-      </div>
-    </section><!-- End  Works Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <p class="mb-1">&copy; Copyright Maryam Ahmed. All Rights Reserved</p>
-          <div class="credits">
-            <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=MyPortfolio
-          -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  </main>
 </body>
-
 </html>
